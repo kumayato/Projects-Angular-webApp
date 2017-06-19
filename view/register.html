@@ -1,0 +1,18 @@
+<div class="register">
+  <form name="form">
+    <div class="form-line clearfix">
+      <span class="icon account"></span>
+      <input name="phone" type="text" placeholder="输入手机号" ng-model='user.phone' validator="required,phone">
+    </div>
+    <div class="form-line clearfix">
+      <span class="icon lock"></span>
+      <input name="password" type="password" placeholder="设置6位以上的密码" ng-model='user.password' validator="required,password">
+    </div>
+    <div class="message-wrap clearfix">
+      <input name="code" placeholder="短信验证码" type="text" class="message-box"  ng-model="user.code" validator="required">
+      <span class="message {{time? 'disabled': ''}}" ng-click='time? 1==1: send()' ng-bind='time? time: "发送短信"'></span>
+    </div>
+    <button class="login-btn" ui-sref='login'>登录</button>
+    <button class="register-btn" validation-submit='form' ng-click="submit()">注册</button>
+  </form>
+</div>

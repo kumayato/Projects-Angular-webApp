@@ -1,0 +1,9 @@
+<div class="positionCompany" ui-sref='company({id:com.id})'>
+    <div class="positionCompany_image">
+        <img ng-src="{{com.imageUrl}}" alt="company">
+    </div>
+    <div class="positionCompany__desc">
+        <p ng-bind='com.name'></p>
+        <p ng-bind='com.industry +"/"+ com.state +"/"+ com.people'></p>
+    </div>
+</div>

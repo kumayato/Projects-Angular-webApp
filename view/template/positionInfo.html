@@ -1,0 +1,16 @@
+<div class='positionInfo'>
+    <p>
+        <span ng-bind='pos.name'></span>
+        <span class="positionInfo__money" ng-bind='pos.salaryName'></span>
+    </p>
+    <p>
+        <span ng-bind='pos.cityName'></span>
+        <span ng-bind='pos.experience'></span>
+        <span ng-bind='pos.education'></span>
+    </p>
+    <p ng-bind='pos.benefit'></p>
+    <!--
+    1.登录之后才能收藏，收藏按钮星星显示
+    -->
+    <img ng-show="isLogin" ng-src="{{imagePath}}" alt="star" ng-click='favorite()'>
+</div>
